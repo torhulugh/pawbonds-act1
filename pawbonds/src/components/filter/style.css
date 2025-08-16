@@ -1,0 +1,123 @@
+#glass-filter {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 95px;
+  background-color: #f3f4f65b;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  border: 1px dashed #9ca3af;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  backdrop-filter: blur(10px) ;
+  height: fit-content;
+  margin-top: 30px;
+  padding: 10px;
+  z-index: 1000;
+}
+#filter--option--dogType,
+#filter--option--dogAge,
+#filter--option--dogSize {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.select--arrow--backgroundColor {
+  color: #666;
+  background-color: #eee;
+  position: absolute;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 30px;
+  right: 4px;
+  height: 30px;
+  z-index: 9998;
+}
+.select--arrow--backgroundColor:hover {
+  color: #8463fc;
+  background-color: #ddd;
+}
+#dogType,
+#dogAge,
+#dogSize {
+  border: 1px solid #ddd;
+  background-color: transparent;
+  padding: 10px 50px 10px 10px; /* Extra right padding for custom arrow */
+  border-radius: 6px;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #111827;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Style the dropdown options */
+#dogType option,
+#dogAge option,
+#dogSize option {
+  background-color: linear-gradient(
+    to right,
+    rgba(156, 191, 247, 0.3),
+    rgba(156, 191, 247, 0.1)
+  );
+  color: #111827;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+}
+
+#dogType:hover,
+#dogAge:hover,
+#dogSize:hover {
+  background-color: #8687b01e;
+  .select--arrow--backgroundColor {
+    background-color: #be1111;
+  }
+}
+
+#dogType option:checked,
+#dogAge option:checked,
+#dogSize option:checked {
+  background-color: #9cbff7;
+  color: white;
+}
+#filter--btn {
+  display: flex;
+  position: relative;
+  background-color: #6ca2f8;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#reset--filter--btn {
+  display: flex;
+  position: relative;
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#filter--btn:hover,
+#reset--filter--btn:hover {
+  background-color: #6475f7;
+}
+#filter-btn-container {
+  display: flex;
+  gap: 10px;
+}
